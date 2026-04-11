@@ -1,3 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 60px;
+}
 .introduce_short {
+  display: flex;
+  background-color: linen;
+  border-radius: 18px;
+  flex-direction: column;
+  width: fit-content;
+  padding: 20px;
+}
+.introduce_long {
   display: block;
+  background-color: linen;
+  border-radius: 18px;
+  flex-direction: column;
+  padding: 20px;
+}
+.my_part {
+  color: blue;
+  font-style: italic;
+  font-weight: bold;
+}
+.introduce_short img {
+  width: 200px;
+  height: 270px;
+  text-align: center;
 }
