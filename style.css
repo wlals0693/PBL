@@ -1,23 +1,33 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.container_short {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin: 60px;
 }
 .introduce_short {
-  display: flex;
+  display: block;
   background-color: linen;
   border-radius: 18px;
   flex-direction: column;
   width: fit-content;
   padding: 20px;
 }
+.introduce_short:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.container_long {
+  display: grid;
+  gap: 20px;
+  margin: 60px;
+}
 .introduce_long {
   display: block;
   background-color: linen;
   border-radius: 18px;
   flex-direction: column;
-  padding: 20px;
+  padding: 30px;
 }
 .my_part {
   color: blue;
