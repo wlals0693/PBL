@@ -31,6 +31,20 @@ body {
   border-color: blue;
   border-style: solid;
 }
+.image_part {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: aquamarine;
+  padding: 5px 12px;
+  margin: 10px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
 .introduce_long {
   display: block;
   background-color: linen;
