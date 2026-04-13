@@ -45,6 +45,11 @@ body {
   font-size: 12px;
   font-weight: bold;
 }
+.my_part {
+  color: blue;
+  font-style: italic;
+  font-weight: bold;
+}
 .introduce_long {
   display: block;
   background-color: linen;
@@ -53,10 +58,8 @@ body {
   padding: 30px;
   margin: 60px 60px 30px;
 }
-.my_part {
-  color: blue;
-  font-style: italic;
-  font-weight: bold;
+li {
+  margin: 5px 30px;
 }
 .introduce_short img {
   display: block;
