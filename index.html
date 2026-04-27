@@ -9,8 +9,15 @@
   </head>
   <body>
     <div class="btn_tops">
-      <button class="btn_top">아기사자 추가하기</button>
-      <button class="btn_top">마지막 아기사자 삭제하기</button>
+      <button class="btn_top" id="addLionBtn" type="button">
+        아기사자 추가하기
+      </button>
+      <button class="btn_top" id="deleteLastLionBtn" type="button">
+        마지막 아기사자 삭제하기
+      </button>
+      <button class="btn_top" id="showDraftBtn" type="button">
+        임시저장 보기
+      </button>
       <span class="card_count" id="cardCount">아기사자: 9명</span>
     </div>
     <div class="container_short">
@@ -266,6 +273,70 @@
       <li>먹기</li>
       <h3>한 마디</h3>
       따봉~
+    </div>
+    <div class="modal" id="addFormModal" hidden>
+      <div class="modal_box">
+        <h2>새 아기사자 추가</h2>
+        <form id="addLionForm" class="lion_form">
+          <div>
+            <label for="lionName">이름</label>
+            <input id="lionName" name="name" type="text" />
+          </div>
+          <div>
+            <label for="lionRole">역할</label>
+            <select id="lionRole" name="role">
+              <option value="Backend">Backend</option>
+              <option value="Frontend">Frontend</option>
+              <option value="Design">Design</option>
+            </select>
+          </div>
+          <div class="full_width">
+            <label for="lionIntro">자기소개</label>
+            <input id="lionIntro" name="intro" type="text" />
+          </div>
+          <div>
+            <label for="lionEmail">이메일</label>
+            <input id="lionEmail" name="email" type="text" />
+          </div>
+          <div>
+            <label for="lionPhone">전화번호</label>
+            <input id="lionPhone" name="phone" type="tel" />
+          </div>
+          <div class="full_width">
+            <label for="lionGithub">깃허브 URL</label>
+            <input id="lionGithub" name="github" type="url" />
+          </div>
+          <div class="full_width">
+            <label for="lionSkills">관심 기술 (쉼표로 구분)</label>
+            <input id="lionSkills" name="skills" type="text" />
+          </div>
+          <div class="full_width">
+            <label for="lionComment">한 마디</label>
+            <input id="lionComment" name="comment" type="text" />
+          </div>
+          <p class="draft_status full_width" id="draftStatus"></p>
+          <div class="form_buttons full_width">
+            <button class="btn_cancel" id="cancelAddBtn" type="button">
+              취소
+            </button>
+            <button class="btn_draft" id="saveDraftBtn" type="button">
+              임시저장하기
+            </button>
+            <button class="btn_submit" type="submit">추가</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="draftViewModal" hidden>
+      <div class="modal_box modal_box_small">
+        <p class="draft_notice">이 정보는 페이지에서 이탈하면 사라집니다.</p>
+        <h2>임시저장 정보</h2>
+        <div class="draft_content" id="draftContent"></div>
+        <button class="btn_cancel" id="closeDraftBtn" type="button">
+          닫기
+        </button>
+      </div>
     </div>
   </body>
 </html>

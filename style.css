@@ -87,6 +87,113 @@ li {
   border: 1px solid #ccc;
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal_box {
+  width: 600px;
+  max-width: 95%;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+}
+
+.modal_box_small {
+  width: 520px;
+}
+
+.lion_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.lion_form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.lion_form input,
+.lion_form select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.full_width {
+  grid-column: 1 / -1;
+}
+
+.draft_status {
+  margin: 0;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.draft_notice {
+  margin: 0 0 16px;
+  padding: 12px;
+  color: #664d03;
+  font-weight: bold;
+  background: #fff3cd;
+  border: 1px solid #ffe69c;
+  border-radius: 8px;
+}
+
+.draft_content {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.draft_content p {
+  margin: 0;
+}
+
+.form_buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn_cancel,
+.btn_draft,
+.btn_submit {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn_cancel {
+  background: #ccc;
+}
+
+.btn_draft {
+  color: white;
+  background: #ff9800;
+}
+
+.btn_submit {
+  color: white;
+  background: #4caf50;
+}
+
 /* 폼 반응형 스타일 */
 @media (max-width: 650px) {
   #addLionForm {
